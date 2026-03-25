@@ -49,3 +49,19 @@
 .signup-btn:hover {
   background-color: #1b5e20;
 }
+@media (max-width: 770px) {
+  .navbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  .signup-btn {
+    padding: 6px 15px;
+  }
+}
