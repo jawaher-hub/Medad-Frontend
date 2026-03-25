@@ -5,7 +5,8 @@ import MainWelcome from './pages/MainWelcome';
 import RegisterRole from './pages/RegisterRole';
 import RegisterRestaurant from './pages/RegisterRestaurant';
 import RegisterCharity from './pages/RegisterCharity';
-const Login = () => <div style={{padding: '50px'}}>Login Page...</div>;
+import Login from './pages/Login';
+
 
 function App() {
   return (
@@ -20,12 +21,15 @@ function App() {
           <Route path="/register-role" element={<RegisterRole />} />
           
           
-          <Route path="/login" element={<Login />} />
 
 
           <Route path="/register-restaurant" element={<RegisterRestaurant />} />
         
+
           <Route path="/register-charity" element={<RegisterCharity />} />
+
+
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
