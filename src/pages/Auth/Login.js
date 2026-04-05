@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './RegisterForm.css';
-
+import '../Registration/RegisterForm.css';
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
@@ -62,7 +61,7 @@ const Login = () => {
         </div>
 
         <p className="footer-text">
-          Don't have an account? <Link to="/register-role">Sign Up</Link>
+          Don't have an account? <Link to="/register-role" style={{ color: '#2e7d32', fontWeight: 'bold'}}>Sign Up</Link>
         </p>
       </form>
     </div>
