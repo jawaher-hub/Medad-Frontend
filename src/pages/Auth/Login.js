@@ -1,100 +1,90 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:src/pages/Login.js
 import { Link, useNavigate } from 'react-router-dom';
-import './RegisterForm.css';
-
-=======
-import { Link } from 'react-router-dom';
 import '../Registration/RegisterForm.css';
->>>>>>> 648d4062996b7d8db2bc7ad3c6d9a9b375c69b54:src/pages/Auth/Login.js
+
 const Login = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
+    const [credentials, setCredentials] = useState({ email: '', password: '' });
+    const [error, setError] = useState('');
 
-  const handleChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
-    setError('');
-  };
+    const handleChange = (e) => {
+        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+        setError('');
+    };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+    const handleLogin = (e) => {
+        e.preventDefault();
 
-    if (!credentials.email.includes('@')) {
-      setError('Please enter a valid email address');
-      return;
-    }
+        if (!credentials.email.includes('@')) {
+            setError('Please enter a valid email address');
+            return;
+        }
 
-    if (
-        credentials.email === 'admin@medad.com' &&
-        credentials.password === '123456'
-    ) {
-      navigate('/admin/dashboard');
-      return;
-    }
+        if (
+            credentials.email === 'admin@medad.com' &&
+            credentials.password === '123456'
+        ) {
+            navigate('/admin/dashboard');
+            return;
+        }
 
-    setError('Invalid email or password');
-  };
+        setError('Invalid email or password');
+    };
 
-  return (
-      <div className="form-container">
-        <form className="auth-form" onSubmit={handleLogin}>
-          <h1 className="brand-title">Medad</h1>
-          <p className="brand-subtitle">Bridging the Gap Between Surplus and Need.</p>
+    return (
+        <div className="form-container">
+            <form className="auth-form" onSubmit={handleLogin}>
+                <h1 className="brand-title">Medad</h1>
+                <p className="brand-subtitle">Bridging the Gap Between Surplus and Need.</p>
 
-          <h2 className="form-type-title">Sign In</h2>
+                <h2 className="form-type-title">Sign In</h2>
 
-          {error && <div className="error-banner">{error}</div>}
+                {error && <div className="error-banner">{error}</div>}
 
-          <div className="input-group">
-            <label>Email Address</label>
-            <input
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                required
-                value={credentials.email}
-                onChange={handleChange}
-            />
-          </div>
+                <div className="input-group">
+                    <label>Email Address</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        required
+                        value={credentials.email}
+                        onChange={handleChange}
+                    />
+                </div>
 
-          <div className="input-group">
-            <label>Password</label>
-            <input
-                type="password"
-                name="password"
-                placeholder="••••••••"
-                required
-                value={credentials.password}
-                onChange={handleChange}
-            />
-          </div>
+                <div className="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="••••••••"
+                        required
+                        value={credentials.password}
+                        onChange={handleChange}
+                    />
+                </div>
 
-          <div className="forgot-pass">
-            <Link to="/forgot-password">Forgot password?</Link>
-          </div>
+                <div className="forgot-pass">
+                    <Link to="/forgot-password">Forgot password?</Link>
+                </div>
 
-<<<<<<< HEAD:src/pages/Login.js
-          <button type="submit" className="submit-btn">Sign In</button>
+                <button type="submit" className="submit-btn">Sign In</button>
 
-          <div className="divider">
-            <span>OR</span>
-          </div>
+                <div className="divider">
+                    <span>OR</span>
+                </div>
 
-          <p className="footer-text">
-            Don't have an account? <Link to="/register-role">Sign Up</Link>
-          </p>
-        </form>
-      </div>
-=======
-        <p className="footer-text">
-          Don't have an account? <Link to="/register-role" style={{ color: '#2e7d32', fontWeight: 'bold'}}>Sign Up</Link>
-        </p>
-      </form>
-    </div>
->>>>>>> 648d4062996b7d8db2bc7ad3c6d9a9b375c69b54:src/pages/Auth/Login.js
-  );
+                <p className="footer-text">
+                    Don't have an account?{' '}
+                    <Link to="/register-role" style={{ color: '#2e7d32', fontWeight: 'bold' }}>
+                        Sign Up
+                    </Link>
+                </p>
+            </form>
+        </div>
+    );
 };
 
 export default Login;
