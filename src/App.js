@@ -21,6 +21,12 @@ import MyListings from './pages/Restaurant/MyListings';
 import CharityRequests from './pages/Restaurant/CharityRequests';
 import PickupConfirmation from './pages/Restaurant/PickupConfirmation';
 
+// Charity pages
+import BrowseFeed from './pages/charity/BrowseFeed';
+import DonationDetail from './pages/charity/DonationDetail';
+import AssignRepresentative from './pages/charity/AssignRepresentative';
+import ConfirmDelivery from './pages/charity/ConfirmDelivery';
+import RatingFeedback from './pages/charity/RatingFeedback';
 function App() {
   return (
       <Router>
@@ -47,7 +53,14 @@ function App() {
             <Route path="/restaurant/my-listings" element={<MyListings />} />
             <Route path="/restaurant/requests" element={<CharityRequests />} />
             <Route path="/restaurant/pickup-confirm" element={<PickupConfirmation />} />
-          </Routes>
+
+             {/* Charity routes*/}
+            <Route path="/browse" element={<BrowseFeed />} />
+            <Route path="/donation/:id" element={<DonationDetail />} />
+            <Route path="/assign/:requestId" element={<AssignRepresentative />} />
+            <Route path="/confirm/:requestId" element={<ConfirmDelivery />} />
+            <Route path="/rating/:deliveryId" element={<RatingFeedback />} />
+            </Routes>
         </div>
       </Router>
   );

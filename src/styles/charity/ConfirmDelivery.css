@@ -1,0 +1,177 @@
+.confirm-container {
+  min-height: 90vh;
+  background-color: #f4fbf4;
+  padding: 40px 20px;
+}
+
+.confirm-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.confirm-card h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.confirm-card .subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.confirm-card .input-group {
+  margin-bottom: 20px;
+}
+
+.confirm-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.confirm-card input,
+.confirm-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.confirm-card input:focus,
+.confirm-card textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+.confirm-card small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+.image-upload-section {
+  margin-top: 8px;
+}
+
+.photo-preview-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.photo-preview {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-photo {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-placeholder {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-placeholder:hover {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.upload-placeholder span {
+  font-size: 32px;
+  color: #2e7d32;
+}
+
+.upload-placeholder p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #1b5e20;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #2e7d32;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .confirm-card {
+    padding: 20px;
+  }
+  
+  .photo-preview-grid {
+    justify-content: center;
+  }
+}

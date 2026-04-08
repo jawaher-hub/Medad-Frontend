@@ -1,0 +1,15 @@
+.info-box {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.info-box p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.info-box strong {
+  color: #2e7d32;
+}
