@@ -1,23 +1,35 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function PendingApprovals() {
+    const navigate = useNavigate();
+
     const [users, setUsers] = useState([
         {
             id: 1,
-            name: 'Rayeq Restaurant',
+            name: 'Dominos Restaurant',
             role: 'Restaurant',
-            email: 'rayeq@mail.com',
+            email: 'Dominos@gmail.com',
             date: '2026-03-01',
-            status: 'Pending'
+            status: 'Pending',
         },
         {
             id: 2,
-            name: 'Hope Foundation',
+            name: 'Ehsan',
             role: 'Charity',
-            email: 'hope@mail.com',
+            email: 'Ehsan@gmail.com',
             date: '2026-03-02',
-            status: 'Pending'
-        }
+            status: 'Pending',
+        },
+
+        {
+            id: 3,
+            name: 'Hope Charity',
+            role: 'Charity',
+            email: 'Hope@gmail.com',
+            date: '2026-03-05',
+            status: 'Pending',
+        },
     ]);
 
     const handleApprove = (id) => {
@@ -30,6 +42,14 @@ function PendingApprovals() {
 
     return (
         <div style={styles.page}>
+
+            <button
+                onClick={() => navigate('/admin/dashboard')}
+                style={styles.backButton}
+            >
+                ⬅ Back to Dashboard
+            </button>
+
             <h1 style={styles.title}>Pending User Approvals</h1>
 
             <div style={styles.table}>
@@ -65,11 +85,11 @@ function PendingApprovals() {
                         </div>
                     </div>
                 ))}
-            </div>
 
-            {users.length === 0 && (
-                <p style={{ marginTop: '20px' }}>No pending users 🎉</p>
-            )}
+                {users.length === 0 && (
+                    <p style={{ marginTop: '20px' }}>No pending users 🎉</p>
+                )}
+            </div>
         </div>
     );
 }
@@ -79,6 +99,15 @@ const styles = {
         padding: '30px',
         backgroundColor: '#f5f7fb',
         minHeight: '100vh'
+    },
+    backButton: {
+        marginBottom: '20px',
+        padding: '10px 15px',
+        backgroundColor: '#1f3b64',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '8px',
+        cursor: 'pointer'
     },
     title: {
         color: '#1f3b64',

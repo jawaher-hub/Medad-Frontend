@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function AdminDashboard() {
     const stats = [
-        { title: 'Total Restaurants', value: 24 },
-        { title: 'Total Charities', value: 18 },
-        { title: 'Food Listings', value: 56 },
-        { title: 'Completed Donations', value: 142 },
-        { title: 'Pending Approvals', value: 7 },
+        { title: 'Total Restaurants', value: 15 },
+        { title: 'Total Charities', value: 10 },
+        { title: 'Food Listings', value: 25 },
+        { title: 'Completed Donations', value: 30 },
+        { title: 'Pending Approvals', value: 5 },
         { title: 'Flagged Listings', value: 3 }
     ];
 
@@ -20,14 +21,29 @@ function AdminDashboard() {
     ];
 
     const recentActivities = [
-        'Rayeq Restaurant added a new food listing.',
-        'Hope Foundation completed a donation pickup.',
+        'Dominos Restaurant added a new food listing.',
+        'Ehsan completed a donation pickup.',
         '2 new charity accounts are waiting for approval.',
         'One food listing was flagged for safety review.'
     ];
 
     return (
         <div style={styles.page}>
+            <div style={styles.adminTopNav}>
+                <Link to="/admin/pending-approvals" style={styles.adminNavLink}>
+                    Pending Approvals
+                </Link>
+                <Link to="/admin/safety-monitor" style={styles.adminNavLink}>
+                    Safety Monitor
+                </Link>
+                <Link to="/admin/user-management" style={styles.adminNavLink}>
+                    User Management
+                </Link>
+                <Link to="/admin/settings" style={styles.adminNavLink}>
+                    Settings
+                </Link>
+            </div>
+
             <div style={styles.header}>
                 <h1 style={styles.title}>Admin Analytics Dashboard</h1>
                 <select style={styles.select}>
@@ -84,6 +100,20 @@ const styles = {
         minHeight: '100vh',
         backgroundColor: '#f5f7fb',
         padding: '30px'
+    },
+    adminTopNav: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        gap: '28px',
+        marginBottom: '30px',
+        flexWrap: 'wrap'
+    },
+    adminNavLink: {
+        textDecoration: 'none',
+        color: '#2d2d2d',
+        fontSize: '18px',
+        fontWeight: '600'
     },
     header: {
         display: 'flex',
