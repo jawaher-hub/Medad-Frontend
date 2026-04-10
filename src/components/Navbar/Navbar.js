@@ -7,8 +7,14 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const role = localStorage.getItem('userRole') || "";
-    setUserRole(role);
+    const updateRole = () => {
+      const role = localStorage.getItem('userRole') || "";
+      setUserRole(role);
+    };
+
+    updateRole(); 
+    window.addEventListener('storage', updateRole);
+    return () => window.removeEventListener('storage', updateRole);
   }, [location]);
 
   const getDashboardLink = () => {

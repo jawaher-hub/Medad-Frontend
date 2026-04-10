@@ -10,10 +10,13 @@ const MainWelcome = () => {
         <span className="green-text">Surplus and Need</span>
       </h1>
       <p className="welcome-description">
-        Connecting restaurants with local charities to ensure no food goes to waste.
+        "Connecting restaurants with charities to ensure no food goes to waste".
       </p>
       <Link to="/register-role" className="start-button">
         Get Started
+      </Link>
+      <Link to="/login" className="main-login-link">
+          Already have an account? Login
       </Link>
     </div>
   );

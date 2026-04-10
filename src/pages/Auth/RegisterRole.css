@@ -37,7 +37,18 @@
   font-size: 50px;
   margin-bottom: 15px;
 }
-
+.back-link-btn {
+  background: none;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.back-link-btn:hover {
+  color: #2e7d32;
+}
 @media (max-width: 600px) {
   .role-card {
     width: 100%;

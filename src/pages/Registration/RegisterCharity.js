@@ -114,6 +114,14 @@ const RegisterCharity = () => {
         </div>
 
         <button type="submit" className="submit-btn">Create Account</button>
+        <button 
+          type="button" 
+          className="submit-btn" 
+          style={{ backgroundColor: '#ccc', marginTop: '10px' }} 
+          onClick={() => navigate('/register-role')}
+        >
+          Back
+        </button>
       </form>
     </div>
   );

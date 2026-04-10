@@ -20,7 +20,7 @@
 }
 
 .welcome-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #666;
   margin-bottom: 40px;
   max-width: 600px;
@@ -36,8 +36,16 @@
   font-weight: bold;
   display: inline-block;
   transition: all 0.3s ease;
+  margin-bottom: 13px;
 }
-
+.main-login-link {
+  color: #0a8010;
+  text-decoration: none;
+  font-size: 19px;
+  margin-top: 15px; 
+  transition: 0.2s;
+  font-weight: bold;
+}
 .start-button:hover {
   transform: translateY(-8px);
   background-color: #245f24;

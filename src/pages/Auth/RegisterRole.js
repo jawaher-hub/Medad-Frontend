@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoFastFoodOutline } from "react-icons/io5";
 import { FaHandsHelping } from "react-icons/fa";
 import './RegisterRole.css';
 
 const RegisterRole = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="role-page">
       <h2 className="role-header">How would you like to join us?</h2>
@@ -21,7 +23,12 @@ const RegisterRole = () => {
           <h3>Charity</h3>
           <p>I want to receive food for those in need</p>
         </Link>
+      </div>
 
+      <div style={{ marginTop: '30px', width: '100%' }}>
+        <button onClick={() => navigate('/')} className="back-link-btn">
+          🡨 Back to Home
+        </button>
       </div>
     </div>
   );

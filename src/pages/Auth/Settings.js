@@ -21,12 +21,13 @@ const Settings = () => {
     };
 
     const handleLogout = () => {
-        if (window.confirm("Are you sure you want to logout?")) {
-            localStorage.clear(); 
-            window.dispatchEvent(new Event("storage"));
-            navigate('/login'); 
-        }
+    if (window.confirm("Are you sure you want to logout?")) {
+        localStorage.removeItem('userRole');
+        localStorage.clear(); 
+        window.location.href = '/'; 
+    }
     };
+
 
     return (
         <div className="form-container" style={{ marginTop: '40px' }}>
