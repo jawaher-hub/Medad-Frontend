@@ -28,7 +28,14 @@ const Login = () => {
             navigate('/admin/dashboard');
             return;
         }
-
+        if (credentials.email === 'rest@medad.com' && credentials.password === '123456') {
+            navigate('/restaurant/dashboard');
+            return;
+        }
+        if (credentials.email === 'charity@medad.com' && credentials.password === '123456') {
+            navigate('/browse'); 
+            return;
+        }
         setError('Invalid email or password');
     };
 
