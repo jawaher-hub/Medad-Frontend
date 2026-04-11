@@ -82,3 +82,17 @@ To allow for seamless evaluation, we have configured the following demo accounts
 * **Verification:** Pending User Approval Queue.
 * **Security:** Safety Monitor to flag/remove unsafe listings.
 * **Management:** User List (Suspend/Reactivate accounts) and Application Settings.
+---
+
+#### Frameworks 
+* **React.js:** The core frontend library.
+* **React Router DOM:** Used for handling routing and navigation between different pages (Dashboard, Settings, Auth..).
+
+#### Dependencies
+* **State Management (Hooks)** 
+* **Browser Storage (LocalStorage)** 
+* **CSS3 (Modular CSS)** 
+* **JavaScript**
+
+#### Tools
+* **Node.js & npm:** Used for package management and running the development environment.
