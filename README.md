@@ -68,10 +68,15 @@ To allow for seamless evaluation, we have configured the following demo accounts
 * **Interaction:** Accept/Reject Charity requests and Pickup Confirmation modals.
 
 ### **Zahraa: Charity Experience & Verification**
-* **Browse Feed:** Real-time search and category filtering.
-* **Interaction:** Donation Detail View.
-* **Logistics:** Assign Pickup Representative form.
-* **Closing Cycle:** Confirm Delivery Page (Photo uploads & Driver info) and Ratings.
+Developed the complete charity user journey, ensuring seamless food donation requests and delivery verification.
+* **Browse Feed:** Searchable grid of available food donations with category filtering.
+* **Donation Detail** Comprehensive view with safety info and request functionality
+* **Assign Representative** Form to assign pickup personnel with validation
+* **Confirm Delivery**  Delivery verification with photo upload and phone collection
+* **Rating & Feedback** 5-star rating system with tags and written reviews
+* **My Requests Dashboard** Central tracking of all donation requests with status management
+-  Established complete navigation flow: Browse -> Detail -> Requests -> Assign -> Confirm -> Rate
+
 
 ### **Sadeem: Administrator Control Panel**
 * **Analytics:** Impact charts and data visualization cards.
