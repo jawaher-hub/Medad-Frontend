@@ -37,7 +37,7 @@ function AddFoodListing() {
     try {
       // Build the payload (photo name only — real upload needs FormData/S3)
       const payload = {
-        title:          form.foodName,
+        foodName:          form.foodName,
         category:       form.category,
         quantity:       Number(form.quantity),
         expiryDate:     form.expirationDate,
