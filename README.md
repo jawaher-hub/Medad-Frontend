@@ -335,7 +335,7 @@ Response 400 Bad Request (not delivered yet):
 
 | Service | URL |
 |---|---|
-| Frontend | https://medad-frontend.vercel.app |
+| Frontend | https://medad-frontend-sand.vercel.app |
 | Backend | https://medad-backend.onrender.com |
 
 ---
